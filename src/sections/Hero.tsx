@@ -17,13 +17,11 @@ export const HeroSection = () => {
           }}
         ></div>
 
-        {/* Hero Rings */}
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
 
-        {/* Hero Orbit Elements */}
         <HeroOrbit size={800} rotation={-72}>
           <Star className="size-28 text-emerald-300" />
         </HeroOrbit>
@@ -52,7 +50,7 @@ export const HeroSection = () => {
           <div className="size-3 rounded-full bg-emerald-300/20" />
         </HeroOrbit>
         <HeroOrbit size={520} rotation={-41}>
-          <div className="size-3 rounded-full bg-emerald-300/20" />
+          <div className="size-2 rounded-full bg-emerald-300/20" />
         </HeroOrbit>
         <HeroOrbit size={650} rotation={-5}>
           <div className="size-2 rounded-full bg-emerald-300/20" />
