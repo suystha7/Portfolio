@@ -6,59 +6,66 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import JavaScriptIcon from "@/assets/icons/square-js.svg";
+import HTMLIcon from "@/assets/icons/html5.svg";
+import CSSIcon from "@/assets/icons/css3.svg";
+import ReactIcon from "@/assets/icons/react.svg";
+import NextIcon from "@/assets/icons/chrome.svg";
+import GithubIcon from "@/assets/icons/github.svg";
+import { title } from "process";
 
 export const portfolioProjects = [
-    {
-      company: "Personal",
-      year: "2025",
-      title: "TODO List",
-      results: [
-        { title: "Optimistic updates" },
-        { title: "Caching & invalidation" },
-        { title: "Increased mobile traffic by 35%" },
-      ],
-      link: "https://youtu.be/4k7IdSLxh6w",
-      image: darkSaasLandingPage,
-    },
-    {
-      company: "Innovative Co",
-      year: "2021",
-      title: "Light Saas Landing Page",
-      results: [
-        { title: "Boosted sales by 20%" },
-        { title: "Expanded customer reach by 35%" },
-        { title: "Increased brand awareness by 15%" },
-      ],
-      link: "https://youtu.be/7hi5zwO75yc",
-      image: lightSaasLandingPage,
-    },
-    {
-      company: "Personal",
-      year: "2022",
-      title: "Tic-Tac-Toe",
-      results: [
-        { title: "Enhanced user experience by 40%" },
-        { title: "Improved site speed by 50%" },
-        { title: "Increased mobile traffic by 35%" },
-      ],
-      link: "https://youtu.be/Z7I5uSRHMHg",
-      image: aiStartupLandingPage,
-    },
-  ];
+  {
+    company: "Personal",
+    year: "2025",
+    title: "TODO List",
+    results: [
+      { title: "Optimistic updates" },
+      { title: "Caching & invalidation" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/4k7IdSLxh6w",
+    image: darkSaasLandingPage,
+  },
+  {
+    company: "Innovative Co",
+    year: "2021",
+    title: "Light Saas Landing Page",
+    results: [
+      { title: "Boosted sales by 20%" },
+      { title: "Expanded customer reach by 35%" },
+      { title: "Increased brand awareness by 15%" },
+    ],
+    link: "https://youtu.be/7hi5zwO75yc",
+    image: lightSaasLandingPage,
+  },
+  {
+    company: "Personal",
+    year: "2022",
+    title: "Tic-Tac-Toe",
+    results: [
+      { title: "Enhanced user experience by 40%" },
+      { title: "Improved site speed by 50%" },
+      { title: "Increased mobile traffic by 35%" },
+    ],
+    link: "https://youtu.be/Z7I5uSRHMHg",
+    image: aiStartupLandingPage,
+  },
+];
 
 export const words = [
-    "Performant",
-    "Accessible",
-    "Secure",
-    "Interactive",
-    "Scalable",
-    "User Friendly",
-    "Responsive",
-    "Maintainable",
-    "Search Optimized",
-    "Usable",
-    "Reliable",
-  ];
+  "Performant",
+  "Accessible",
+  "Secure",
+  "Interactive",
+  "Scalable",
+  "User Friendly",
+  "Responsive",
+  "Maintainable",
+  "Search Optimized",
+  "Usable",
+  "Reliable",
+];
 
 export const testimonials = [
   {
@@ -90,5 +97,63 @@ export const testimonials = [
     position: "Director of IT @ MegaCorp",
     text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
     avatar: memojiAvatar5,
+  },
+];
+
+export const toolboxItems = [
+  {
+    title: "JavaScript",
+    iconType: JavaScriptIcon,
+  },
+  {
+    title: "HTML5",
+    iconType: HTMLIcon,
+  },
+  {
+    title: "CSS3",
+    iconType: CSSIcon,
+  },
+  {
+    title: "React",
+    iconType: ReactIcon,
+  },
+  {
+    title: "Next",
+    iconType: NextIcon,
+  },
+  {
+    title: "Github",
+    iconType: GithubIcon,
+  },
+  {
+    title: "TailwindCss",
+    iconType: GithubIcon,
+  },
+];
+
+export const myHobbies = [
+  {
+    title: "Music",
+    emoji: "🎵",
+  },
+  {
+    title: "Watch Movies",
+    emoji: "🎥",
+  },
+  {
+    title: "Gaming",
+    emoji: "🎮",
+  },
+  {
+    title: "Hiking",
+    emoji: "🚶‍♀️",
+  },
+  {
+    title: "Travelling",
+    emoji: "🧳",
+  },
+  {
+    title: "Reading",
+    emoji: "📔",
   },
 ];
