@@ -126,7 +126,7 @@ export const toolboxItems = [
     iconType: GithubIcon,
   },
   {
-    title: "TailwindCss",
+    title: "TailwindCSS",
     iconType: GithubIcon,
   },
 ];
@@ -135,37 +135,65 @@ export const myHobbies = [
   {
     title: "Music",
     emoji: "🎵",
-    left: "8%",
-    top: "2%",
+    left: "5%",
+    top: "5%",
   },
   {
     title: "Movies",
     emoji: "🎥",
-    left: "55%",
-    top: "0%",
+    left: "50%",
+    top: "5%",
+  },
+
+  {
+    title: "Hiking",
+    emoji: "🚶‍♀️",
+    left: "40%",
+    top: "40%",
   },
   {
     title: "Gaming",
     emoji: "🎮",
-    left: "15%",
+    left: "6%",
     top: "35%",
   },
+  
   {
-    title: "Hiking",
-    emoji: "🚶‍♀️",
-    left: "58%",
-    top: "35%",
+    title: "Reading",
+    emoji: "📔",
+    left: "5%",
+    top: "65%",
+  },
+  {
+    title: "Writing",
+    emoji: "📔",
+    left: "68%",
+    top: "45%",
   },
   {
     title: "Travelling",
     emoji: "✈️",
-    left: "55%",
+
+    left: "48%",
     top: "70%",
   },
+];
+
+export const socialLinks = [
   {
-    title: "Reading",
-    emoji: "📔",
-    left: "6%",
-    top: "65%",
+    title: "Github",
+    href: "",
+  },
+  {
+    title: "Facebook",
+    href: "",
+  },
+  {
+    title: "Instagram",
+    href: "",
+  },
+  {
+    title: "LinkedIn",
+    href: "",
   },
 ];
