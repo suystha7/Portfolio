@@ -135,25 +135,37 @@ export const myHobbies = [
   {
     title: "Music",
     emoji: "🎵",
+    left: "8%",
+    top: "2%",
   },
   {
-    title: "Watch Movies",
+    title: "Movies",
     emoji: "🎥",
+    left: "55%",
+    top: "0%",
   },
   {
     title: "Gaming",
     emoji: "🎮",
+    left: "15%",
+    top: "35%",
   },
   {
     title: "Hiking",
     emoji: "🚶‍♀️",
+    left: "58%",
+    top: "35%",
   },
   {
     title: "Travelling",
-    emoji: "🧳",
+    emoji: "✈️",
+    left: "55%",
+    top: "70%",
   },
   {
     title: "Reading",
     emoji: "📔",
+    left: "6%",
+    top: "65%",
   },
 ];
