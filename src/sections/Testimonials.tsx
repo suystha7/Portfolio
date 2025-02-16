@@ -4,7 +4,7 @@ import { Card } from "@/components/Card";
 import { testimonials } from "@/data";
 import { Fragment } from "react";
 
-export const TestimonialsSection = () => {
+const TestimonialsSection = () => {
   return (
     <section className="py-16 lg:py-24">
       <div className="container">
@@ -56,3 +56,5 @@ export const TestimonialsSection = () => {
     </section>
   );
 };
+
+export default TestimonialsSection;

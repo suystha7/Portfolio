@@ -11,12 +11,12 @@ import { ToolboxItem } from "@/components/ToolboxItem";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 
-export const AboutSection = () => {
+const AboutSection = () => {
   const constraintRef = useRef(null);
 
   return (
     <div>
-      <section className="py-20 lg:py-28">
+      <section className="py-20 lg:py-28" id="about">
         <div className="container">
           <SectionHeader
             eyebrow="About Me"
@@ -103,3 +103,5 @@ export const AboutSection = () => {
     </div>
   );
 };
+
+export default AboutSection;

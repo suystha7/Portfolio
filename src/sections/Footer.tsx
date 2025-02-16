@@ -1,7 +1,7 @@
 import { socialLinks } from "@/data";
 import ArrowUpRight from "@/assets/icons/arrow-up-right.svg";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="relative -z-10 overflow-x-clip">
       <div className="absolute h-[400px] w-[1600px] bottom-0 left-1/2 -translate-x-1/2 bg-emerald-300/30 mask-radial-bottom -z-10"></div>
@@ -26,3 +26,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;

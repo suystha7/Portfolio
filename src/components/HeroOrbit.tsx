@@ -1,28 +1,53 @@
 import React, { PropsWithChildren } from "react";
-import Star from "@/assets/icons/star.svg";
+import { twMerge } from "tailwind-merge";
 
 const HeroOrbit = ({
   children,
   size,
   rotation,
-}: PropsWithChildren<{ size: number; rotation: number }>) => {
+  shouldOrbit = false,
+  shouldSpin = false,
+  spinDuration,
+  orbitDuration,
+}: PropsWithChildren<{
+  size: number;
+  rotation: number;
+  orbitDuration?: string;
+  shouldOrbit?: boolean;
+  shouldSpin?: boolean;
+  spinDuration?: string;
+}>) => {
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10">
       <div
-        className="flex items-start justify-start"
+        className={twMerge(shouldOrbit === true && "animate-spin")}
         style={{
-          height: `${size}px`,
-          width: `${size}px`,
-          transform: `rotate(${rotation}deg)`,
+          animationDuration: orbitDuration,
         }}
       >
         <div
-          className="inline-flex"
+          className="flex items-start justify-start"
           style={{
-            transform: `rotate(${rotation * -1}deg)`,
+            height: `${size}px`,
+            width: `${size}px`,
+            transform: `rotate(${rotation}deg)`,
           }}
         >
-          {children}
+          <div
+            className={twMerge(shouldSpin === true && "animate-spin")}
+            style={{
+              animationDuration: spinDuration,
+            }}
+          >
+            <div
+              className="inline-flex"
+              style={{
+                transform: `rotate(${rotation * -1}deg)`,
+              }}
+            >
+              {children}
+            </div>
+          </div>
         </div>
       </div>
     </div>
