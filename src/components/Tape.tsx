@@ -2,7 +2,7 @@ import Star from "@/assets/icons/star.svg";
 import { words } from "@/data";
 import { Fragment } from "react";
 
-const TapeSection = () => {
+const Tape = () => {
   return (
     <div className="py-16 lg:py-24 overflow-x-clip ">
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 -rotate-3 -mx-1">
@@ -29,4 +29,4 @@ const TapeSection = () => {
   );
 };
 
-export default TapeSection;
+export default Tape;

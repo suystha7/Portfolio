@@ -2,17 +2,16 @@
 
 import { useState, useEffect, Suspense, lazy } from "react";
 import { ArrowUp } from "lucide-react";
-import Header from "@/sections/Header";
+import Header from "@/components/Header";
 import { Spinner } from "@/components/Spinner";
+import Footer from "@/components/Footer";
+import Tape from "@/components/Tape";
 
-// Lazy-loaded sections
-const HeroSection = lazy(() => import("@/sections/Hero"));
-const ProjectsSection = lazy(() => import("@/sections/Projects"));
-const TapeSection = lazy(() => import("@/sections/Tape"));
-const AboutSection = lazy(() => import("@/sections/About"));
-const TestimonialsSection = lazy(() => import("@/sections/Testimonials"));
-const ContactSection = lazy(() => import("@/sections/Contact"));
-const Footer = lazy(() => import("@/sections/Footer"));
+const HeroSection = lazy(() => import("@/containers/Hero"));
+const ProjectsSection = lazy(() => import("@/containers/Projects"));
+const AboutSection = lazy(() => import("@/containers/About"));
+const TestimonialsSection = lazy(() => import("@/containers/Testimonials"));
+const ContactSection = lazy(() => import("@/containers/Contact"));
 
 export default function Home() {
   const [showScroll, setShowScroll] = useState(false);
@@ -43,12 +42,13 @@ export default function Home() {
       >
         <HeroSection />
         <ProjectsSection />
-        <TapeSection />
+        <Tape />
         <AboutSection />
         <TestimonialsSection />
         <ContactSection />
-        <Footer />
       </Suspense>
+
+      <Footer />
 
       {showScroll && (
         <button

@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 import BookImage from "@/assets/images/book-cover.png";
 import MapImage from "@/assets/images/map.png";
 import SmileEmoji from "@/assets/images/memoji-smile.png";
-import { myHobbies, toolboxItems } from "@/data";
+import { educationTimeline, myHobbies, toolboxItems } from "@/data";
 import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItem } from "@/components/ToolboxItem";
 import { motion } from "framer-motion";
@@ -28,11 +28,29 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
               <Card className="h-[320px] md:col-span-2 lg:col-span-1">
                 <CardHeader
-                  title="My Reads"
-                  description="Explore the books shaping my perspective"
+                  title="My Education"
+                  description="A journey through my academic milestones and the knowledge gained along the way"
                 />
-                <div className="w-40 mx-auto mt-2 md:mt-0">
-                  <Image src={BookImage} alt="book" />
+                <div className="w-full mt-2 md:mt-0">
+                  <div className="space-y-2">
+                    {educationTimeline.map((edu) => (
+                      <div
+                        key={edu.degree}
+                        className="flex flex-col items-start gap-4 px-6 py-2"
+                      >
+                        <div className="bg-gradient-to-r from-emerald-300 to-sky-400 tracking-widest text-transparent bg-clip-text gap-2">
+                          <span className="font-semibold uppercase">
+                            {edu.university}
+                          </span>
+                          <div className="text-sm text-white/60 mt-2">
+                            <span className=""> {edu.degree}</span>
+                            <span className="mx-2"> | </span>
+                            <span>{edu.years}</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </Card>
 

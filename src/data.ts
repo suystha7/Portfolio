@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import todolist from "@/assets/images/todolist.png";
+import typingTest from "@/assets/images/typingTest.png";
+import tictactoe from "@/assets/images/tictactoe.png";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -12,44 +12,43 @@ import CSSIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import NextIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
-import { title } from "process";
 
 export const portfolioProjects = [
   {
     company: "Personal",
     year: "2025",
+    title: "Typing Speed Test",
+    results: [
+      { title: "Boosted sales by 20%" },
+      { title: "Expanded customer reach by 35%" },
+      { title: "Increased brand awareness by 15%" },
+    ],
+    link: "https://typing-speed-test-suyog.vercel.app/",
+    image: typingTest,
+  },
+  {
+    company: "Personal",
+    year: "2024",
     title: "TODO List",
     results: [
       { title: "Optimistic updates" },
       { title: "Caching & invalidation" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
-  },
-  {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://suyog-todo-list.vercel.app/",
+    image: todolist,
   },
   {
     company: "Personal",
-    year: "2022",
+    year: "2023",
     title: "Tic-Tac-Toe",
     results: [
       { title: "Enhanced user experience by 40%" },
       { title: "Improved site speed by 50%" },
       { title: "Increased mobile traffic by 35%" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://tictactoe-suyog.netlify.app/",
+    image: tictactoe,
   },
 ];
 
@@ -65,6 +64,19 @@ export const words = [
   "Search Optimized",
   "Usable",
   "Reliable",
+];
+
+export const educationTimeline = [
+  {
+    degree: "Bsc.CSIT",
+    university: "Amrit Science Campus",
+    years: "2020 - 2025",
+  },
+  {
+    degree: "+2 Science",
+    university: "National School of Sciences",
+    years: "2017 - 2019",
+  },
 ];
 
 export const testimonials = [
@@ -157,7 +169,6 @@ export const myHobbies = [
     left: "6%",
     top: "35%",
   },
-  
   {
     title: "Reading",
     emoji: "📔",
@@ -173,7 +184,6 @@ export const myHobbies = [
   {
     title: "Travelling",
     emoji: "✈️",
-
     left: "48%",
     top: "70%",
   },

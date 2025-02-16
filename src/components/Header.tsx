@@ -2,7 +2,7 @@ const Header = () => {
   return (
     <div className="flex justify-center items-center fixed top-3 w-full z-10">
       <nav className="flex gap-1 p-0.5 border border-white/15 bg-white/10 backdrop-blur rounded-full">
-        <a href="#home" className="nav-item">
+        <a href="#" className="nav-item">
           Home
         </a>
         <a href="#projects" className="nav-item">
@@ -10,6 +10,9 @@ const Header = () => {
         </a>
         <a href="#about" className="nav-item">
           About
+        </a>
+        <a href="#testimonial" className="nav-item">
+          Testimonial
         </a>
         <a
           href="#contact"

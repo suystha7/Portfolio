@@ -6,7 +6,7 @@ import { Fragment } from "react";
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24" id="testimonial">
       <div className="container">
         <SectionHeader
           eyebrow="Happy Clients"
