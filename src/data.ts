@@ -192,7 +192,7 @@ export const myHobbies = [
 export const socialLinks = [
   {
     title: "Github",
-    href: "",
+    href: "https://github.com/suystha7",
   },
   {
     title: "Facebook",

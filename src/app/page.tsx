@@ -44,7 +44,7 @@ export default function Home() {
         <ProjectsSection />
         <Tape />
         <AboutSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <ContactSection />
       </Suspense>
 

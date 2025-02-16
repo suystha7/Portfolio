@@ -6,28 +6,21 @@ import grainImage from "@/assets/images/grain.jpg";
 import { Orbit } from "@/components/Orbit";
 
 const HeroSection = () => {
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <section
-      className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
-      id="home"
-    >
+    <section className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip" id="home">
       <div className="absolute inset-0 mask-gradient">
-        <div
-          className="absolute inset-0 -z-30 opacity-5"
-          style={{
-            backgroundImage: `url(${grainImage.src})`,
-          }}
-        ></div>
-
+        <div className="absolute inset-0 -z-30 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }}></div>
         <div className="size-[620px] hero-ring"></div>
         <div className="size-[820px] hero-ring"></div>
         <div className="size-[1020px] hero-ring"></div>
         <div className="size-[1220px] hero-ring"></div>
-
         <Orbit />
       </div>
 
@@ -38,7 +31,6 @@ const HeroSection = () => {
             <div className="bg-green-500 size-2.5 rounded-full relative">
               <div className="bg-green-500 rounded-full absolute inset-0 animate-ping-large"></div>
             </div>
-
             <div className="text-sm font-medium">
               Available for new projects
             </div>
@@ -49,23 +41,18 @@ const HeroSection = () => {
               Building Exceptional User Experiences
             </h1>
             <p className="mt-4 text-center text-white/60 md:text-lg">
-              I specialize in transforming designs into functional,
-              high-performing web applications. Let&apos;s discuss your next
-              project.
+              I specialize in transforming designs into functional, high-performing web applications. Let&apos;s discuss your next project.
             </p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
+          {/* Down Arrow Button */}
+          <div className="mt-8">
             <button
-              className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl"
-              onClick={scrollToProjects}
+              onClick={() => scrollToSection("projects")}
+              className="relative flex flex-col items-center justify-center p-2 bg-transparent border-0 cursor-pointer"
             >
-              <span className="font-semibold">Explore my work</span>
-              <ArrowDown className="size-4" />
-            </button>
-            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
-              <span>👋</span>
-              <span className="font-semibold">Let&apos;s Connect</span>
+              <ArrowDown className="text-white p-3 rounded-full shadow-lg hover:bg-blue-500 transition-all" />
+              <span className="text-white text-sm mt-2">Scroll Down</span>
             </button>
           </div>
         </div>
