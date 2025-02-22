@@ -27,10 +27,23 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="p-8 max-w-[1200px] mx-auto">
-      <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-teal-400 bg-clip-text text-transparent mb-4">
-        Work Experience
-      </h2>
+    <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    className="max-w-[1200px] mx-auto"
+  >
+    <motion.h2
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="text-5xl font-bold text-center mb-12
+                 bg-gradient-to-r from-indigo-400 to-teal-400 
+                 bg-clip-text text-transparent"
+    >
+      Work Experience
+    </motion.h2>
+
       <motion.div
         className="flex space-x-8 overflow-x-auto flex-wrap gap-6"
         initial="hidden"
@@ -55,6 +68,8 @@ const Experience = () => {
           </Reveal>
         ))}
       </motion.div>
+      </motion.div>
+
     </div>
   );
 };
