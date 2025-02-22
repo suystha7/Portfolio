@@ -1,7 +1,7 @@
 # 🚀 My React Portfolio
 
 ![Portfolio Screenshot](./src/assets/project1.png)  
-[🔗 Live Demo](https://cyberboyayush.in)
+[🔗 Live Demo](https://suystha7.vercel.app/)
 
 ## 📌 Overview
 
@@ -131,8 +131,8 @@ netlify deploy --prod
 
 ## 📬 Contact Me
 
-💼 **Portfolio:** [me.cyberboyayush.in](https://me.cyberboyayush.in)  
-🐙 **GitHub:** [CyberBoyAyush](https://github.com/CyberBoyAyush)  
-📧 **Email:** [cseayushsharma@gmail.com](mailto:cseayushsharma@gmail.com)
+💼 **Portfolio:** [Suyog Shrestha](https://suystha7.vercel.app/)  
+🐙 **GitHub:** [suystha7](https://github.com/suystha7)  
+📧 **Email:** [suyogstha317@gmail.com](mailto:suyogstha317@gmail.com)
 
 🚀 Feel free to contribute, raise issues, or suggest improvements! 💡

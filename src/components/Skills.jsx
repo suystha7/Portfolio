@@ -1,26 +1,100 @@
-import React, { useState, useEffect } from "react"
-import { DiHtml5, DiCss3, DiJavascript1, DiReact, DiNodejsSmall, DiMongodb, DiJava, DiPython, DiGit } from "react-icons/di"
-import { SiTailwindcss, SiCplusplus, SiTensorflow, SiFigma } from "react-icons/si"
-import { motion } from "framer-motion"
+import { useState, useEffect } from "react";
+import {
+  DiHtml5,
+  DiCss3,
+  DiJavascript1,
+  DiReact,
+  DiNodejsSmall,
+  DiMongodb,
+  DiGit,
+} from "react-icons/di";
+import {
+  SiTailwindcss,
+  SiCplusplus,
+  SiExpress,
+  SiNextdotjs,
+} from "react-icons/si";
+import { motion } from "framer-motion";
+import { FaSass } from "react-icons/fa";
 
 const skills = [
   {
-    category: 'Technologies I Love',
+    category: "Technologies I Love",
     items: [
-      { name: 'HTML5', icon: <DiHtml5 />, color: 'text-[#E34F26]', bgColor: 'bg-[#E34F26]/10' },
-      { name: 'CSS3', icon: <DiCss3 />, color: 'text-[#1572B6]', bgColor: 'bg-[#1572B6]/10' },
-      { name: 'JavaScript', icon: <DiJavascript1 />, color: 'text-[#F7DF1E]', bgColor: 'bg-[#F7DF1E]/10' },
-      { name: 'React', icon: <DiReact />, color: 'text-[#61DAFB]', bgColor: 'bg-[#61DAFB]/10' },
-      { name: 'Node.js', icon: <DiNodejsSmall />, color: 'text-[#339933]', bgColor: 'bg-[#339933]/10' },
-      { name: 'MongoDB', icon: <DiMongodb />, color: 'text-[#47A248]', bgColor: 'bg-[#47A248]/10' },
-      { name: 'Python', icon: <DiPython />, color: 'text-[#3776AB]', bgColor: 'bg-[#3776AB]/10' },
-      { name: 'Java', icon: <DiJava />, color: 'text-[#007396]', bgColor: 'bg-[#007396]/10' },
-      { name: 'C++', icon: <SiCplusplus />, color: 'text-[#00599C]', bgColor: 'bg-[#00599C]/10' },
-      { name: 'Tailwind', icon: <SiTailwindcss />, color: 'text-[#06B6D4]', bgColor: 'bg-[#06B6D4]/10' },
-      { name: 'Git', icon: <DiGit />, color: 'text-[#F05032]', bgColor: 'bg-[#F05032]/10' },
-      { name: 'TensorFlow', icon: <SiTensorflow />, color: 'text-[#FF6F00]', bgColor: 'bg-[#FF6F00]/10' },
-    ]
-  }
+      {
+        name: "C/C++",
+        icon: <SiCplusplus />,
+        color: "text-[#00599C]",
+        bgColor: "bg-[#00599C]/10",
+      },
+      {
+        name: "HTML5",
+        icon: <DiHtml5 />,
+        color: "text-[#E34F26]",
+        bgColor: "bg-[#E34F26]/10",
+      },
+      {
+        name: "CSS3",
+        icon: <DiCss3 />,
+        color: "text-[#1572B6]",
+        bgColor: "bg-[#1572B6]/10",
+      },
+      {
+        name: "JavaScript",
+        icon: <DiJavascript1 />,
+        color: "text-[#F7DF1E]",
+        bgColor: "bg-[#F7DF1E]/10",
+      },
+      {
+        name: "React.js",
+        icon: <DiReact />,
+        color: "text-[#61DAFB]",
+        bgColor: "bg-[#61DAFB]/10",
+      },
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+        color: "text-[#fff]",
+        bgColor: "bg-[#000]/10",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss />,
+        color: "text-[#06B6D4]",
+        bgColor: "bg-[#06B6D4]/10",
+      },
+      {
+        name: "Sass",
+        icon: <FaSass />,
+        color: "text-[#E800E8]",
+        bgColor: "bg-[#E800E8]/10",
+      },
+      {
+        name: "Node.js",
+        icon: <DiNodejsSmall />,
+        color: "text-[#339933]",
+        bgColor: "bg-[#339933]/10",
+      },
+      {
+        name: "Express.js",
+        icon: <SiExpress />,
+        color: "text-[#000]",
+        bgColor: "bg-[#fff]/80",
+      },
+      {
+        name: "MongoDB",
+        icon: <DiMongodb />,
+        color: "text-[#47A248]",
+        bgColor: "bg-[#47A248]/10",
+      },
+      {
+        name: "Git",
+        icon: <DiGit />,
+        color: "text-[#F05032]",
+        bgColor: "bg-[#F05032]/10",
+      },
+    ],
+  },
 ];
 
 const TechCard = ({ item, index }) => {
@@ -28,7 +102,7 @@ const TechCard = ({ item, index }) => {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    setIsTouchDevice('ontouchstart' in window);
+    setIsTouchDevice("ontouchstart" in window);
   }, []);
 
   const handleInteraction = () => {
@@ -53,8 +127,6 @@ const TechCard = ({ item, index }) => {
                 flex flex-col items-center gap-3 cursor-pointer`}
     >
       <motion.div
-        whileHover={!isTouchDevice ? { rotate: 360 } : undefined}
-        animate={isAnimated ? { rotate: 360 } : { rotate: 0 }}
         transition={{ type: "spring", stiffness: 300, damping: 10 }}
         className={`text-5xl md:text-6xl ${item.color}`}
       >
@@ -63,11 +135,13 @@ const TechCard = ({ item, index }) => {
       <span className={`font-medium ${item.color} text-sm md:text-base`}>
         {item.name}
       </span>
-      
+
       {/* Glow Effect */}
-      <div 
+      <div
         className={`absolute inset-0 -z-10 rounded-xl transition-opacity duration-500
-                   ${item.bgColor} ${isAnimated || !isTouchDevice ? 'opacity-50 blur-xl' : 'opacity-0'}`}
+                   ${item.bgColor} ${
+          isAnimated || !isTouchDevice ? "opacity-50 blur-xl" : "opacity-0"
+        }`}
       />
 
       {/* Touch indicator */}

@@ -171,7 +171,7 @@ const Navbar = () => {
               transition={{ delay: 0.3 }}
             >
               <motion.a
-                href="https://bio.link/suyogshr"
+                href="https://suystha7.bio.link/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setNav(false)}
