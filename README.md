@@ -62,7 +62,7 @@ This is my personal **React Portfolio** showcasing my skills, projects, and expe
 ### 1️⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/CyberBoyAyush/react-portfolio.git
+git clone https://github.com/suystha7/Portfolio.git
 cd react-portfolio
 ```
 
