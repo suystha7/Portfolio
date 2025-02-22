@@ -13,6 +13,7 @@ import {
   SiCplusplus,
   SiExpress,
   SiNextdotjs,
+  SiTypescript,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { FaSass } from "react-icons/fa";
@@ -21,12 +22,6 @@ const skills = [
   {
     category: "Technologies I Love",
     items: [
-      {
-        name: "C/C++",
-        icon: <SiCplusplus />,
-        color: "text-[#00599C]",
-        bgColor: "bg-[#00599C]/10",
-      },
       {
         name: "HTML5",
         icon: <DiHtml5 />,
@@ -44,6 +39,12 @@ const skills = [
         icon: <DiJavascript1 />,
         color: "text-[#F7DF1E]",
         bgColor: "bg-[#F7DF1E]/10",
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript />,
+        color: "text-[#2B6BB5]",
+        bgColor: "bg-[#2B6BB5]/10",
       },
       {
         name: "React.js",
@@ -79,7 +80,7 @@ const skills = [
         name: "Express.js",
         icon: <SiExpress />,
         color: "text-[#000]",
-        bgColor: "bg-[#fff]/80",
+        bgColor: "bg-[#fff]/10",
       },
       {
         name: "MongoDB",

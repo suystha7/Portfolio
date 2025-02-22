@@ -140,7 +140,7 @@ const CodingStats = () => {
           {/* GitHub Stats Card */}
           <StatsCard
             className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 
-                     backdrop-blur-sm border border-purple-500/30 rounded-xl p-6
+                     backdrop-blur-sm border border-indigo-500/30 rounded-xl p-6
                      group relative overflow-hidden"
           >
             <motion.div
@@ -191,7 +191,7 @@ const CodingStats = () => {
           {/* LeetCode Stats Card */}
           <StatsCard
             className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 
-                     backdrop-blur-sm border border-purple-500/30 rounded-xl p-6
+                     backdrop-blur-sm border border-indigo-500/30 rounded-xl p-6
                      group relative overflow-hidden"
           >
             <motion.div

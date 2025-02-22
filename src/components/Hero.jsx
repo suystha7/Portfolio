@@ -8,6 +8,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiFirebase,
+  SiExpress,
 } from "react-icons/si";
 
 const FloatingIcon = ({ Icon, className, animate }) => {
@@ -217,7 +218,7 @@ const Hero = () => {
           animate={{ y: [-30, 30], rotate: [-20, 20] }}
         />
         <FloatingIcon
-          Icon={SiFirebase}
+          Icon={SiExpress}
           className="bottom-[30%] right-[15%]"
           animate={{ scale: [1, 1.3, 1], rotate: [0, -360] }}
         />
