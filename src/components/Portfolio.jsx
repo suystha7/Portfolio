@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { AiOutlineGithub, AiOutlineLink, AiOutlineEye } from "react-icons/ai";
+import { useState, useEffect } from "react";
+import { motion} from "framer-motion";
+import { AiOutlineGithub, AiOutlineEye } from "react-icons/ai";
 import { Particles } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
 import project4 from "../assets/project4.png";
-import project5 from "../assets/project5.png";
-import Reveal from "./Reveal";
 
 const projects = [
   {
@@ -195,7 +193,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="relative min-h-screen py-20 px-4" id="portfolio">
+    <div className="relative min-h-screen py-20 px-4" id="projects">
       <Particles
         id="portfolioParticles"
         init={particlesInit}

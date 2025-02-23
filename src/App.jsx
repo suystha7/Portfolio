@@ -44,7 +44,7 @@ export default function App() {
         style={{ scaleX }}
       />
       <Cursor />
-      <Navbar />
+      <Navbar/>
       <Hero />
       <Skills />
       <Portfolio />
