@@ -58,7 +58,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <box-icon name="code-alt" color="#ffffff"></box-icon>
-          <span className="ml-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-indigo-600">
+          <span className="ml-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-sky-600">
             S & S
           </span>
           <motion.div
