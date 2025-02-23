@@ -54,7 +54,6 @@ const App = () => {
           <Skills />
           <Experience />
           <Portfolio />
-          <EducationTimeline />
           <Contact />
           <Footer />
         </Suspense>
