@@ -26,7 +26,7 @@ const Footer = () => {
                 repeat: Infinity,
                 ease: "linear"
               }}
-              className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-sky-400 to-indigo-400 
+              className="text-3xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-sky-400 
                        bg-[200%_auto] bg-clip-text text-transparent"
             >
               Suyog Shrestha
