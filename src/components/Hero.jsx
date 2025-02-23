@@ -6,8 +6,6 @@ import {
   FaLinkedin,
   FaReact,
   FaNodeJs,
-  FaDownload,
-  FaFileDownload,
   FaCloudDownloadAlt,
 } from "react-icons/fa";
 import { DiJavascript, DiMongodb } from "react-icons/di";
@@ -15,7 +13,6 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiTailwindcss,
-  SiFirebase,
   SiExpress,
 } from "react-icons/si";
 
@@ -65,13 +62,13 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 text-white max-w-lg"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 flex justify-center md:justify-start gap-2 ">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 flex md:block justify-center md:justify-start gap-2 ">
               Hi, I'm{"  "}
               <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
                 Suyog Shrestha
               </span>
             </h1>
-            <div className="flex justify-center items-center w-full">
+            <div className="flex justify-center md:justify-start items-center w-full">
               <TypeAnimation
                 sequence={[
                   "MERN Stack Developer",
