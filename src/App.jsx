@@ -40,7 +40,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#0f0f0f]">
       <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-indigo-600 origin-left z-50"
+        className="fixed top-0 left-0 right-0 h-1 bg-blue-600 origin-left z-50"
         style={{ scaleX }}
       />
       <Cursor />
@@ -48,7 +48,7 @@ export default function App() {
       <Hero />
       <Skills />
       <Portfolio />
-      {/* <Experience /> */}
+      <Experience />
       {/* <CodingStats /> */}
       <Contact />
       <Footer />

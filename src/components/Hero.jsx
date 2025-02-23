@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FaGithub, FaLinkedin, FaReact, FaNodeJs } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaDownload, FaFileDownload, FaCloudDownloadAlt } from "react-icons/fa";
 import { DiJavascript, DiMongodb } from "react-icons/di";
 import {
   SiTypescript,
@@ -24,7 +24,7 @@ const FloatingIcon = ({ Icon, className, animate }) => {
 
   return (
     <motion.div
-      className={`absolute text-indigo-500/25 ${className}`}
+      className={`absolute text-blue-500/25 ${className}`}
       animate={{
         ...animate,
         x: [0, mousePosition.x * 0.02, 0],
@@ -46,7 +46,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 lg:py-24">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-indigo-900/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/20 to-transparent"></div>
 
       <div className="container mx-auto px-4 lg:px-6 z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-8 max-w-6xl mx-auto">
@@ -59,7 +59,7 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-indigo-500 to-teal-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
                 Suyog Shrestha
               </span>
             </h1>
@@ -82,41 +82,42 @@ const Hero = () => {
             </p>
             <div className="flex gap-4">
               <motion.a
-                href="https://suystha7.bio.link/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/src/assets/Resume.pdf"
+                download="Suyog Shrestha_CV.pdf" 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-indigo-600 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                className="px-6 py-3 bg-blue-600 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2"
               >
-                Visit Profiles
+                <FaCloudDownloadAlt className="mr-2 w-6 h-6" />
+                Download CV
               </motion.a>
+
               <div className="flex gap-3">
                 <motion.a
                   href="https://github.com/suystha7" // Replace with your GitHub URL
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 border border-indigo-600 rounded-lg hover:bg-indigo-600/10 transition-all group"
+                  className="p-3 border border-blue-600 rounded-lg hover:bg-blue-600/10 transition-all group"
                   whileHover={{
                     scale: 1.05,
                     rotate: [0, -10, 10, 0],
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaGithub className="w-6 h-6 text-white group-hover:text-indigo-500 transition-colors" />
+                  <FaGithub className="w-6 h-6 text-white group-hover:text-blue-500 transition-colors" />
                 </motion.a>
                 <motion.a
                   href="https://www.linkedin.com/in/suyog-shrestha-843b95248/" // Replace with your LinkedIn URL
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 border border-indigo-600 rounded-lg hover:bg-indigo-600/10 transition-all group"
+                  className="p-3 border border-blue-600 rounded-lg hover:bg-blue-600/10 transition-all group"
                   whileHover={{
                     scale: 1.05,
                     rotate: [0, -10, 10, 0],
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaLinkedin className="w-6 h-6 text-white group-hover:text-indigo-500 transition-colors" />
+                  <FaLinkedin className="w-6 h-6 text-white group-hover:text-blue-500 transition-colors" />
                 </motion.a>
               </div>
             </div>
@@ -136,7 +137,7 @@ const Hero = () => {
             >
               {/* Animated gradient background */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-teal-500 rounded-full blur-3xl opacity-30"
+                className="absolute inset-0 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full blur-3xl opacity-30"
                 animate={{
                   scale: [1, 1.2, 1],
                   rotate: [0, 180, 360],
@@ -152,13 +153,13 @@ const Hero = () => {
               <motion.img
                 src="/profile.png"
                 alt="Profile"
-                className="relative z-10 rounded-full w-full h-full object-cover transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-indigo-500/50"
+                className="relative z-10 rounded-full w-full h-full object-cover transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-sky-500/50"
                 whileHover={{ rotate: [0, -5, 5, 0] }}
                 transition={{ duration: 0.5 }}
               />
 
               {/* Decorative ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-indigo-500/50 scale-110 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute inset-0 rounded-full border-2 border-blue-500/50 scale-110 opacity-0 group-hover:opacity-100 transition-all duration-300" />
             </motion.div>
           </motion.div>
         </div>
@@ -226,9 +227,9 @@ const Hero = () => {
 
       {/* Remove or adjust the existing floating elements if needed */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-teal-500 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-indigo-600 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-sky-500 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-blue-600 rounded-full animate-pulse"></div>
       </div>
     </section>
   );

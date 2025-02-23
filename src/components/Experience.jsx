@@ -27,49 +27,54 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1 }}
-    className="max-w-[1200px] mx-auto"
-  >
-    <motion.h2
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="text-5xl font-bold text-center mb-12
-                 bg-gradient-to-r from-indigo-400 to-teal-400 
-                 bg-clip-text text-transparent"
-    >
-      Work Experience
-    </motion.h2>
+    <div className="relative min-h-screen py-20 px-4" id="experience">
+      {/* Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-blue-500/30 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-sky-500/30 rounded-full blur-3xl" />
+      </div>
 
-      <motion.div
-        className="flex space-x-8 overflow-x-auto flex-wrap gap-6"
-        initial="hidden"
-        animate="visible"
-        transition={{ staggerChildren: 0.3 }} // For staggered animation effect on the child items
-      >
-        {experiences.map((experience, index) => (
-          <Reveal key={index}>
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 1 }}
-              className="flex-none w-[300px] sm:w-[350px] md:w-[400px] border border-indigo-600 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-indigo-700/10"
-            >
-              <h2 className="text-gray-100 text-xl font-semibold">
-                {experience.company}
-              </h2>
-              <p className="text-gray-300">{experience.period}</p>
-              <p className="text-gray-400 mt-4">{experience.position}</p>
-            </motion.div>
-          </Reveal>
-        ))}
-      </motion.div>
-      </motion.div>
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent mb-4 text-center">
+            Work Experience
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            I have worked with these amazing organizations and learned a lot
+            from them. I am always excited to learn and explore more!
+          </p>
+        </motion.div>
 
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          initial="hidden"
+          animate="visible"
+          transition={{ staggerChildren: 0.3 }} // For staggered animation effect on the child items
+        >
+          {experiences.map((experience, index) => (
+            <Reveal key={index}>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 1 }}
+                className="flex-none w-[300px] sm:w-[350px] md:w-[400px] border border-blue-600 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-blue-700/10"
+              >
+                <h2 className="text-gray-100 text-xl font-semibold">
+                  {experience.company}
+                </h2>
+                <p className="text-gray-300">{experience.period}</p>
+                <p className="text-gray-400 mt-4">{experience.position}</p>
+              </motion.div>
+            </Reveal>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };

@@ -57,8 +57,8 @@ const StatsCard = ({ number, label }) => {
         show: { opacity: 1, y: 0 },
       }}
       whileHover={{ scale: 1.05 }}
-      className="bg-gradient-to-br from-indigo-900/40 to-indigo-800/30
-               border border-indigo-500/30 p-6 rounded-xl text-center
+      className="bg-gradient-to-br from-blue-900/40 to-indigo-800/30
+               border border-blue-500/30 p-6 rounded-xl text-center
                hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]
                transition-all duration-300"
     >
@@ -66,7 +66,7 @@ const StatsCard = ({ number, label }) => {
         {count}
         {number.includes("+") ? "+" : ""}
       </motion.h4>
-      <p className="text-indigo-300 text-sm">{label}</p>
+      <p className="text-blue-300 text-sm">{label}</p>
     </motion.div>
   );
 };
@@ -77,10 +77,10 @@ const FormInput = ({ type, placeholder, name }) => (
     type={type}
     placeholder={placeholder}
     name={name}
-    className="w-full rounded-xl border border-indigo-500/50 bg-indigo-900/20
+    className="w-full rounded-xl border border-blue-500/50 bg-blue-900/20
              py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-indigo-400 focus:outline-none focus:ring-2 
-             focus:ring-indigo-500/20 transition-all duration-300"
+             focus:border-blue-400 focus:outline-none focus:ring-2 
+             focus:ring-blue-500/20 transition-all duration-300"
   />
 );
 
@@ -90,10 +90,10 @@ const FormTextarea = ({ placeholder, name }) => (
     placeholder={placeholder}
     name={name}
     rows="4"
-    className="w-full rounded-xl border border-indigo-500/50 bg-indigo-900/20
+    className="w-full rounded-xl border border-blue-500/50 bg-blue-900/20
              py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-indigo-400 focus:outline-none focus:ring-2 
-             focus:ring-indigo-500/20 transition-all duration-300
+             focus:border-blue-400 focus:outline-none focus:ring-2 
+             focus:ring-blue-500/20 transition-all duration-300
              resize-none"
   />
 );
@@ -144,7 +144,7 @@ const Contact = () => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-teal-400 bg-clip-text text-transparent mb-4"
+            className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent mb-4"
           >
             Let's Connect
           </motion.h2>
@@ -167,12 +167,12 @@ const Contact = () => {
             className="space-y-8"
           >
             <div
-              className="bg-gradient-to-br from-indigo-900/40 to-indigo-800/30 backdrop-blur-md
-                          border border-indigo-500/30 p-8 rounded-2xl
+              className="bg-gradient-to-br from-blue-900/40 to-indigo-800/30 backdrop-blur-md
+                          border border-blue-500/30 p-8 rounded-2xl
                           transform hover:-translate-y-1 transition-all duration-300
                           hover:shadow-[0_0_30px_rgba(147,51,234,0.3)]"
             >
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-indigo-400 to-teal-400 bg-clip-text text-transparent">
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
                 About Me
               </h3>
               <p className="text-gray-300 leading-relaxed">
@@ -230,10 +230,10 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  className="bg-gradient-to-br from-indigo-900/40 to-indigo-800/30
-                           border border-indigo-500/30 p-4 rounded-xl
-                           text-indigo-400 text-2xl
-                           hover:text-indigo-300 transition-all duration-300
+                  className="bg-gradient-to-br from-blue-900/40 to-indigo-800/30
+                           border border-blue-500/30 p-4 rounded-xl
+                           text-blue-400 text-2xl
+                           hover:text-blue-300 transition-all duration-300
                            hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]"
                 >
                   {social.icon}
@@ -246,10 +246,10 @@ const Contact = () => {
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            action="https://formspree.io/f/xanwyqok"
+            action="https://formspree.io/f/xeoedynk"
             method="POST"
-            className="bg-gradient-to-br from-indigo-900/40 to-indigo-800/30 backdrop-blur-md
-                     border border-indigo-500/30 p-8 rounded-2xl
+            className="bg-gradient-to-br from-blue-900/40 to-sky-800/30 backdrop-blur-md
+                     border border-blue-500/30 p-8 rounded-2xl
                      hover:shadow-[0_0_30px_rgba(147,51,234,0.3)]
                      transition-all duration-300"
           >
@@ -262,10 +262,10 @@ const Contact = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 className="w-full py-4 rounded-xl text-white font-semibold
-                         bg-gradient-to-r from-indigo-600 to-teal-600
-                         hover:from-indigo-700 hover:to-teal-700
+                         bg-gradient-to-r from-blue-600 to-sky-600
+                         hover:from-blue-700 hover:to-sky-700
                          transform transition-all duration-300
-                         shadow-lg hover:shadow-indigo-500/50"
+                         shadow-lg hover:shadow-sky-500/50"
               >
                 Send Message
               </motion.button>

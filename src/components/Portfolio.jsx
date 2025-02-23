@@ -61,12 +61,12 @@ const ProjectButton = ({ href, icon, label }) => (
     }}
     whileTap={{ scale: 0.95 }}
     className="flex items-center gap-2 px-5 py-3 rounded-xl
-             bg-gradient-to-r from-indigo-600 to-teal-600
-             hover:from-indigo-500 hover:to-teal-500
+             bg-gradient-to-r from-blue-600 to-sky-600
+             hover:from-blue-500 hover:to-sky-500
              text-white font-semibold
              shadow-lg shadow-indigo-900/30
              hover:shadow-xl hover:shadow-indigo-600/40
-             border border-indigo-500/20
+             border border-blue-500/20
              backdrop-blur-md z-50
              group [&>*]:text-white" // Added [&>*]:text-white to force white text on all children
   >
@@ -102,9 +102,9 @@ const ProjectCard = ({ project, index, isHovered, onHover }) => {
       onHoverEnd={() => !isTouchDevice && onHover(null)}
       onClick={handleInteraction}
       className="group relative rounded-2xl overflow-hidden
-                 bg-gradient-to-br from-indigo-900/40 to-indigo-800/30
-                 border border-indigo-500/30
-                 hover:border-indigo-500/50
+                 bg-gradient-to-br from-blue-900/40 to-indigo-800/30
+                 border border-blue-500/30
+                 hover:border-blue-500/50
                  transition-all duration-500"
     >
       <div className="relative h-[300px] overflow-hidden">
@@ -136,7 +136,7 @@ const ProjectCard = ({ project, index, isHovered, onHover }) => {
         >
           <h3
             className="text-2xl font-bold mb-2 
-                       bg-gradient-to-r from-indigo-400 to-teal-400 
+                       bg-gradient-to-r from-blue-400 to-sky-400 
                        bg-clip-text text-transparent"
           >
             {project.title}
@@ -157,7 +157,7 @@ const ProjectCard = ({ project, index, isHovered, onHover }) => {
         </motion.div>
 
         {isTouchDevice && (
-          <div className="absolute top-2 right-2 text-sm text-indigo-400 bg-[#030014]/80 px-2 py-1 rounded">
+          <div className="absolute top-2 right-2 text-sm text-blue-400 bg-[#030014]/80 px-2 py-1 rounded">
             Tap to {isActive ? "close" : "view"} details
           </div>
         )}
@@ -214,7 +214,7 @@ const Portfolio = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
           className="text-5xl font-bold text-center mb-12
-                     bg-gradient-to-r from-indigo-400 to-teal-400 
+                     bg-gradient-to-r from-blue-400 to-sky-400 
                      bg-clip-text text-transparent"
         >
           Featured Projects

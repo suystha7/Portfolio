@@ -13,7 +13,7 @@ const Loading = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="text-indigo-500 mb-4"
+          className="text-blue-500 mb-4"
         >
           <FaCode className="w-16 h-16" />
         </motion.div>
@@ -27,7 +27,7 @@ const Loading = () => {
               repeat: Infinity,
               ease: "linear",
             }}
-            className="h-full bg-gradient-to-r from-indigo-500 to-teal-500"
+            className="h-full bg-gradient-to-r from-blue-500 to-sky-500"
           />
         </div>
 
@@ -38,7 +38,7 @@ const Loading = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="mt-4 text-indigo-500 text-sm font-medium"
+          className="mt-4 text-blue-500 text-sm font-medium"
         >
           Loading...
         </motion.p>
