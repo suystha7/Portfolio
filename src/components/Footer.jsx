@@ -7,10 +7,10 @@ const Footer = () => {
     <footer className="relative mt-20">
       {/* Gradient top border */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r 
-                    from-transparent via-orange-500/50 to-transparent" />
+                    from-transparent via-amber-500/50 to-transparent" />
 
       {/* Glass background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-orange-900/10 to-yellow-900/30 
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-900/10 to-yellow-900/30 
                     backdrop-blur-sm -z-10" />
 
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -26,7 +26,7 @@ const Footer = () => {
                 repeat: Infinity,
                 ease: "linear"
               }}
-              className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 
+              className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-amber-400 
                        bg-[200%_auto] bg-clip-text text-transparent"
             >
               Suyog Shrestha
@@ -51,7 +51,7 @@ const Footer = () => {
           opacity: [0.3, 0.6, 0.3],
         }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="h-[2px] w-full bg-gradient-to-r from-transparent via-orange-500/30 to-transparent"
+        className="h-[2px] w-full bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"
       />
     </footer>
   );

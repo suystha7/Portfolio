@@ -14,7 +14,7 @@ const Cursor = () => {
 
   return (
     <div 
-      className="hidden lg:block fixed w-5 h-5 pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-orange-500 via-orange-500 to-yellow-500 mix-blend-screen"
+      className="hidden lg:block fixed w-5 h-5 pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-amber-500 via-orange-500 to-yellow-500 mix-blend-screen"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,

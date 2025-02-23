@@ -57,16 +57,16 @@ const StatsCard = ({ number, label }) => {
         show: { opacity: 1, y: 0 },
       }}
       whileHover={{ scale: 1.05 }}
-      className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30
-               border border-orange-500/30 p-6 rounded-xl text-center
-               hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]
+      className="bg-gradient-to-br from-amber-900/40 to-yellow-800/30
+               border border-amber-500/30 p-6 rounded-xl text-center
+                 hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]
                transition-all duration-300"
     >
       <motion.h4 className="text-3xl font-bold text-white mb-1">
         {count}
         {number.includes("+") ? "+" : ""}
       </motion.h4>
-      <p className="text-orange-300 text-sm">{label}</p>
+      <p className="text-amber-300 text-sm">{label}</p>
     </motion.div>
   );
 };
@@ -77,9 +77,9 @@ const FormInput = ({ type, placeholder, name }) => (
     type={type}
     placeholder={placeholder}
     name={name}
-    className="w-full rounded-xl border border-orange-500/50 bg-orange-900/20
+    className="w-full rounded-xl border border-amber-500/50 bg-amber-900/20
              py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-orange-400 focus:outline-none focus:ring-2 
+             focus:border-amber-400 focus:outline-none focus:ring-2 
              focus:ring-orange-500/20 transition-all duration-300"
   />
 );
@@ -90,9 +90,9 @@ const FormTextarea = ({ placeholder, name }) => (
     placeholder={placeholder}
     name={name}
     rows="4"
-    className="w-full rounded-xl border border-orange-500/50 bg-orange-900/20
+    className="w-full rounded-xl border border-amber-500/50 bg-amber-900/20
              py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-orange-400 focus:outline-none focus:ring-2 
+             focus:border-amber-400 focus:outline-none focus:ring-2 
              focus:ring-orange-500/20 transition-all duration-300
              resize-none"
   />
@@ -144,7 +144,7 @@ const Contact = () => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-4"
+            className="text-5xl font-bold bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent mb-4"
           >
             Let&apos;s Connect
           </motion.h2>
@@ -167,12 +167,12 @@ const Contact = () => {
             className="space-y-8"
           >
             <div
-              className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30 backdrop-blur-md
-                          border border-orange-500/30 p-8 rounded-2xl
+              className="bg-gradient-to-br from-amber-900/40 to-yellow-800/30 backdrop-blur-md
+                          border border-amber-500/30 p-8 rounded-2xl
                           transform hover:-translate-y-1 transition-all duration-300
                           hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]"
             >
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">
                 About Me
               </h3>
               <p className="text-gray-300 leading-relaxed">
@@ -183,7 +183,7 @@ const Contact = () => {
             </div>
 
             <motion.div
-              className="grid grid-cols-2 gap-4"
+              className="grid grid-cols-2 gap-4 "
               variants={{
                 hidden: { opacity: 0 },
                 show: {
@@ -230,11 +230,11 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30
-                           border border-orange-500/30 p-4 rounded-xl
-                           text-orange-400 text-2xl
-                           hover:text-orange-300 transition-all duration-300
-                             hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]"
+                  className="bg-gradient-to-br from-amber-900/40 to-yellow-800/30
+                           border border-amber-500/30 p-4 rounded-xl
+                           text-amber-400 text-2xl
+                           hover:text-amber-300 transition-all duration-300
+                               hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]"
                 >
                   {social.icon}
                 </motion.a>
@@ -248,8 +248,8 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             action="https://formspree.io/f/xeoedynk"
             method="POST"
-            className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30 backdrop-blur-md
-                     border border-orange-500/30 p-8 rounded-2xl
+            className="bg-gradient-to-br from-amber-900/40 to-yellow-800/30 backdrop-blur-md
+                     border border-amber-500/30 p-8 rounded-2xl
                        hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]
                      transition-all duration-300"
           >
@@ -262,8 +262,8 @@ const Contact = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 className="w-full py-4 rounded-xl text-white font-semibold
-                         bg-gradient-to-r from-orange-600 to-yellow-600
-                         hover:from-orange-700 hover:to-yellow-700
+                         bg-gradient-to-r from-amber-600 to-yellow-600
+                         hover:from-amber-700 hover:to-yellow-700
                          transform transition-all duration-300
                          shadow-lg"
               >
