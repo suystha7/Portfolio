@@ -146,7 +146,7 @@ const Navbar = () => {
           transition={{ type: "spring", damping: 20 }}
         >
           <ul className="space-y-8 mt-20">
-            {["about", "portfolio", "contact"].map((section, index) => (
+            {["skills", "projects", "contact"].map((section, index) => (
               <motion.li
                 key={section}
                 initial={{ opacity: 0, x: 20 }}

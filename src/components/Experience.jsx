@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Reveal from "./Reveal";
 
@@ -51,7 +50,7 @@ const Experience = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-center place-content-center"
           initial="hidden"
           animate="visible"
           transition={{ staggerChildren: 0.3 }} // For staggered animation effect on the child items
@@ -65,11 +64,11 @@ const Experience = () => {
                 transition={{ duration: 1 }}
                 className="flex-none w-[300px] sm:w-[350px] md:w-[400px] border border-amber-600 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 bg-amber-700/10"
               >
-                <h2 className="text-gray-100 text-xl font-semibold">
+                <h2 className="text-gray-100 text-base md:text-[21px] font-bold">
                   {experience.company}
                 </h2>
-                <p className="text-gray-300">{experience.period}</p>
-                <p className="text-gray-400 mt-4">{experience.position}</p>
+                <p className="text-gray-300 text-base">{experience.period}</p>
+                <p className="text-gray-200 mt-4 text-lg font-semibold">{experience.position}</p>
               </motion.div>
             </Reveal>
           ))}

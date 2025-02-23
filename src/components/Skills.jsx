@@ -80,7 +80,7 @@ const skills = [
         name: "Express.js",
         icon: <SiExpress />,
         color: "text-[#000]",
-        bgColor: "bg-[#fff]/10",
+        bgColor: "bg-[#fff]/80",
       },
       {
         name: "MongoDB",

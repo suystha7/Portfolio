@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FaGithub, FaLinkedin, FaReact, FaNodeJs, FaDownload, FaFileDownload, FaCloudDownloadAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaReact,
+  FaNodeJs,
+  FaDownload,
+  FaFileDownload,
+  FaCloudDownloadAlt,
+} from "react-icons/fa";
 import { DiJavascript, DiMongodb } from "react-icons/di";
 import {
   SiTypescript,
@@ -24,7 +32,7 @@ const FloatingIcon = ({ Icon, className, animate }) => {
 
   return (
     <motion.div
-      className={`absolute text-amber-500/25 ${className}`}
+      className={`absolute text-orange-500/25 ${className}`}
       animate={{
         ...animate,
         x: [0, mousePosition.x * 0.02, 0],
@@ -46,7 +54,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16 lg:py-24">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-amber-900/20 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-orange-900/20 to-transparent"></div>
 
       <div className="container mx-auto px-4 lg:px-6 z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 lg:gap-8 max-w-6xl mx-auto">
@@ -57,36 +65,39 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="flex-1 text-white max-w-lg"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-amber-500 to-yellow-500 bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 flex justify-center md:justify-start gap-2 ">
+              Hi, I'm{"  "}
+              <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
                 Suyog Shrestha
               </span>
             </h1>
-            <TypeAnimation
-              sequence={[
-                "MERN Stack Developer",
-                1000,
-                "Coder  ",
-                1000,
-                "Programmer",
-                1000,
-              ]}
-              wrapper="h3"
-              repeat={Infinity}
-              className="text-2xl md:text-2xl lg:text-3xl text-gray-300 mb-6"
-            />
-            <p className="text-gray-400 mb-8 max-w-lg">
+            <div className="flex justify-center items-center w-full">
+              <TypeAnimation
+                sequence={[
+                  "MERN Stack Developer",
+                  1000,
+                  "Coder  ",
+                  1000,
+                  "Programmer",
+                  1000,
+                ]}
+                wrapper="h3"
+                repeat={Infinity}
+                className="text-2xl md:text-2xl lg:text-3xl text-gray-300 mb-6 text-center"
+              />
+            </div>
+
+            <p className="text-gray-400 mb-8 max-w-lg text-center md:text-left">
               Passionate MERN stack developer dedicated to building scalable,
               high-performance applications
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               <motion.a
                 href="/src/assets/Resume.pdf"
-                download="Suyog Shrestha_CV.pdf" 
+                download="Suyog Shrestha_CV.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-amber-600 rounded-lg font-semibold hover:bg-amber-700 transition-colors flex items-center gap-2"
+                className="px-6 py-3 bg-orange-600 rounded-lg font-semibold hover:bg-orange-700 transition-colors flex items-center gap-2"
               >
                 <FaCloudDownloadAlt className="mr-2 w-6 h-6" />
                 Download CV
@@ -97,27 +108,27 @@ const Hero = () => {
                   href="https://github.com/suystha7" // Replace with your GitHub URL
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 border border-amber-600 rounded-lg hover:bg-amber-600/10 transition-all group"
+                  className="p-3 border border-orange-600 rounded-lg hover:bg-orange-600/10 transition-all group"
                   whileHover={{
                     scale: 1.05,
                     rotate: [0, -10, 10, 0],
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaGithub className="w-6 h-6 text-white group-hover:text-amber-500 transition-colors" />
+                  <FaGithub className="w-6 h-6 text-white group-hover:text-orange-500 transition-colors" />
                 </motion.a>
                 <motion.a
                   href="https://www.linkedin.com/in/suyog-shrestha-843b95248/" // Replace with your LinkedIn URL
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 border border-amber-600 rounded-lg hover:bg-amber-600/10 transition-all group"
+                  className="p-3 border border-orange-600 rounded-lg hover:bg-orange-600/10 transition-all group"
                   whileHover={{
                     scale: 1.05,
                     rotate: [0, -10, 10, 0],
                   }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <FaLinkedin className="w-6 h-6 text-white group-hover:text-amber-500 transition-colors" />
+                  <FaLinkedin className="w-6 h-6 text-white group-hover:text-orange-500 transition-colors" />
                 </motion.a>
               </div>
             </div>
@@ -128,7 +139,7 @@ const Hero = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="flex-1 flex justify-center items-center lg:justify-center"
+            className="flex-1 flex justify-center items-center lg:justify-center mt-5 md:mt-0"
           >
             <motion.div
               className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 group cursor-pointer"
@@ -137,7 +148,7 @@ const Hero = () => {
             >
               {/* Animated gradient background */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-full blur-3xl opacity-30"
+                className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full blur-3xl opacity-30"
                 animate={{
                   scale: [1, 1.2, 1],
                   rotate: [0, 180, 360],
@@ -159,7 +170,7 @@ const Hero = () => {
               />
 
               {/* Decorative ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-amber-500/50 scale-110 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <div className="absolute inset-0 rounded-full border-2 border-orange-500/50 scale-110 opacity-0 group-hover:opacity-100 transition-all duration-300" />
             </motion.div>
           </motion.div>
         </div>
@@ -227,9 +238,9 @@ const Hero = () => {
 
       {/* Remove or adjust the existing floating elements if needed */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-amber-500 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
         <div className="absolute top-1/2 right-1/3 w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-amber-600 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-orange-600 rounded-full animate-pulse"></div>
       </div>
     </section>
   );
