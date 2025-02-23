@@ -58,11 +58,11 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <box-icon name="code-alt" color="#ffffff"></box-icon>
-          <span className="ml-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-sky-600">
+          <span className="ml-2 text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-yellow-600">
             S & S
           </span>
           <motion.div
-            className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-sky-600 rounded-lg opacity-0 group-hover:opacity-30 blur transition duration-500"
+            className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-yellow-600 rounded-lg opacity-0 group-hover:opacity-30 blur transition duration-500"
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
@@ -82,10 +82,10 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="relative text-gray-300 hover:text-blue-400 transition-colors duration-300 group"
+                className="relative text-gray-300 hover:text-orange-400 transition-colors duration-300 group"
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full" />
               </ScrollLink>
             </motion.li>
           ))}
@@ -98,13 +98,13 @@ const Navbar = () => {
               href="https://me.suyogshr.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600/20 to-sky-600/20 
-                                     border border-blue-500 rounded-xl hover:from-blue-600/30 hover:to-sky-600/30"
+              className="relative inline-flex items-center px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-orange-600/20 to-yellow-600/20 
+                                     border border-orange-500 rounded-xl hover:from-orange-600/30 hover:to-yellow-600/30"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Visit Profiles
-              <motion.div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 opacity-0 group-hover:opacity-20 blur transition duration-500" />
+              <motion.div className="absolute inset-0 rounded-xl bg-gradient-to-r from-orange-600 to-yellow-600 opacity-0 group-hover:opacity-20 blur transition duration-500" />
             </motion.a>
           </motion.li>
         </ul>
@@ -112,7 +112,7 @@ const Navbar = () => {
         {/* Mobile Menu Button */}
         <motion.div
           onClick={() => setNav(!nav)}
-          className="md:hidden z-50 cursor-pointer text-gray-200 hover:text-blue-400 transition-colors"
+          className="md:hidden z-50 cursor-pointer text-gray-200 hover:text-orange-400 transition-colors"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
@@ -140,7 +140,7 @@ const Navbar = () => {
         {/* Mobile Menu */}
         <motion.div
           className={`fixed right-0 top-0 w-[300px] h-screen bg-[#030014] z-40 p-8
-                              border-l border-blue-500/20 backdrop-blur-lg`}
+                              border-l border-orange-500/20 backdrop-blur-lg`}
           initial={{ x: "100%" }}
           animate={{ x: nav ? 0 : "100%" }}
           transition={{ type: "spring", damping: 20 }}
@@ -159,7 +159,7 @@ const Navbar = () => {
                   offset={-70}
                   duration={500}
                   onClick={() => setNav(false)}
-                  className="text-2xl text-gray-300 hover:text-blue-400 transition-colors duration-300 block"
+                  className="text-2xl text-gray-300 hover:text-orange-400 transition-colors duration-300 block"
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
                 </ScrollLink>
@@ -175,8 +175,8 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setNav(false)}
-                className="inline-block px-6 py-3 text-lg font-medium text-white bg-gradient-to-r from-blue-600/20 to-sky-600/20 
-                                         border border-blue-500 rounded-xl hover:from-blue-600/30 hover:to-sky-600/30"
+                className="inline-block px-6 py-3 text-lg font-medium text-white bg-gradient-to-r from-orange-600/20 to-yellow-600/20 
+                                         border border-orange-500 rounded-xl hover:from-orange-600/30 hover:to-yellow-600/30"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

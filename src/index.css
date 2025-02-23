@@ -94,12 +94,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4e45e3;
+  background: #f68013;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6f68ee;
+  background: #f68013;
 }
 
 /* Container fix */

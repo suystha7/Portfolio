@@ -57,8 +57,8 @@ const StatsCard = ({ number, label }) => {
         show: { opacity: 1, y: 0 },
       }}
       whileHover={{ scale: 1.05 }}
-      className="bg-gradient-to-br from-blue-900/40 to-indigo-800/30
-               border border-blue-500/30 p-6 rounded-xl text-center
+      className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30
+               border border-orange-500/30 p-6 rounded-xl text-center
                hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]
                transition-all duration-300"
     >
@@ -66,7 +66,7 @@ const StatsCard = ({ number, label }) => {
         {count}
         {number.includes("+") ? "+" : ""}
       </motion.h4>
-      <p className="text-blue-300 text-sm">{label}</p>
+      <p className="text-orange-300 text-sm">{label}</p>
     </motion.div>
   );
 };
@@ -77,10 +77,10 @@ const FormInput = ({ type, placeholder, name }) => (
     type={type}
     placeholder={placeholder}
     name={name}
-    className="w-full rounded-xl border border-blue-500/50 bg-blue-900/20
+    className="w-full rounded-xl border border-orange-500/50 bg-orange-900/20
              py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-blue-400 focus:outline-none focus:ring-2 
-             focus:ring-blue-500/20 transition-all duration-300"
+             focus:border-orange-400 focus:outline-none focus:ring-2 
+             focus:ring-orange-500/20 transition-all duration-300"
   />
 );
 
@@ -90,10 +90,10 @@ const FormTextarea = ({ placeholder, name }) => (
     placeholder={placeholder}
     name={name}
     rows="4"
-    className="w-full rounded-xl border border-blue-500/50 bg-blue-900/20
+    className="w-full rounded-xl border border-orange-500/50 bg-orange-900/20
              py-3 px-4 text-gray-100 placeholder:text-gray-400
-             focus:border-blue-400 focus:outline-none focus:ring-2 
-             focus:ring-blue-500/20 transition-all duration-300
+             focus:border-orange-400 focus:outline-none focus:ring-2 
+             focus:ring-orange-500/20 transition-all duration-300
              resize-none"
   />
 );
@@ -105,10 +105,10 @@ const Contact = () => {
 
   const particlesConfig = {
     particles: {
-      color: { value: "#6b21a8" },
+      color: { value: "#f68013" },
       links: {
         enable: true,
-        color: "#6b21a8",
+        color: "#f68013",
         opacity: 0.1,
       },
       move: {
@@ -144,9 +144,9 @@ const Contact = () => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent mb-4"
+            className="text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-4"
           >
-            Let's Connect
+            Let&apos;s Connect
           </motion.h2>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -154,8 +154,8 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto"
           >
-            Have a project in mind or want to collaborate? I'd love to hear from
-            you!
+            Have a project in mind or want to collaborate? I&apos;d love to hear
+            from you!
           </motion.p>
         </div>
 
@@ -167,12 +167,12 @@ const Contact = () => {
             className="space-y-8"
           >
             <div
-              className="bg-gradient-to-br from-blue-900/40 to-indigo-800/30 backdrop-blur-md
-                          border border-blue-500/30 p-8 rounded-2xl
+              className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30 backdrop-blur-md
+                          border border-orange-500/30 p-8 rounded-2xl
                           transform hover:-translate-y-1 transition-all duration-300
-                          hover:shadow-[0_0_30px_rgba(147,51,234,0.3)]"
+                          hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]"
             >
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-sky-400 bg-clip-text text-transparent">
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
                 About Me
               </h3>
               <p className="text-gray-300 leading-relaxed">
@@ -196,7 +196,7 @@ const Contact = () => {
               initial="hidden"
               whileInView="show"
             >
-              <StatsCard number="8+" label="Projects" />
+              <StatsCard number="20+" label="Projects" />
               <StatsCard number="2+" label="Years Experience" />
             </motion.div>
 
@@ -230,11 +230,11 @@ const Contact = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
-                  className="bg-gradient-to-br from-blue-900/40 to-indigo-800/30
-                           border border-blue-500/30 p-4 rounded-xl
-                           text-blue-400 text-2xl
-                           hover:text-blue-300 transition-all duration-300
-                           hover:shadow-[0_0_20px_rgba(147,51,234,0.3)]"
+                  className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30
+                           border border-orange-500/30 p-4 rounded-xl
+                           text-orange-400 text-2xl
+                           hover:text-orange-300 transition-all duration-300
+                             hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]"
                 >
                   {social.icon}
                 </motion.a>
@@ -248,9 +248,9 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             action="https://formspree.io/f/xeoedynk"
             method="POST"
-            className="bg-gradient-to-br from-blue-900/40 to-sky-800/30 backdrop-blur-md
-                     border border-blue-500/30 p-8 rounded-2xl
-                     hover:shadow-[0_0_30px_rgba(147,51,234,0.3)]
+            className="bg-gradient-to-br from-orange-900/40 to-yellow-800/30 backdrop-blur-md
+                     border border-orange-500/30 p-8 rounded-2xl
+                       hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]
                      transition-all duration-300"
           >
             <div className="space-y-6">
@@ -262,10 +262,10 @@ const Contact = () => {
                 whileTap={{ scale: 0.98 }}
                 type="submit"
                 className="w-full py-4 rounded-xl text-white font-semibold
-                         bg-gradient-to-r from-blue-600 to-sky-600
-                         hover:from-blue-700 hover:to-sky-700
+                         bg-gradient-to-r from-orange-600 to-yellow-600
+                         hover:from-orange-700 hover:to-yellow-700
                          transform transition-all duration-300
-                         shadow-lg hover:shadow-sky-500/50"
+                         shadow-lg"
               >
                 Send Message
               </motion.button>
