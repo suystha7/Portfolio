@@ -12,7 +12,7 @@ This is my personal **React Portfolio** showcasing my skills, projects, and expe
 ✅ **Responsive Design** – Works flawlessly on all screen sizes.  
 ✅ **Animated Cursor** – Custom gradient animated cursor effect.  
 ✅ **Smooth Scroll Navigation** – Effortless scrolling experience.  
-✅ **Dark Mode Toggle** – Supports both Light and Dark modes.  
+✅ **React Suspense and Lazy Loading** – Efficiently loads components only when needed.  
 ✅ **Optimized Performance** – Built with modern React best practices.
 
 ---
@@ -33,26 +33,36 @@ This is my personal **React Portfolio** showcasing my skills, projects, and expe
 ## 📂 Project Structure
 
 ```
-📦 react-portfolio
-┣ 📂 public
-┃ ┗ 📜 favicon.ico
-┣ 📂 src
-┃ ┣ 📂 components
-┃ ┃ ┣ 📜 Navbar.jsx
-┃ ┃ ┣ 📜 Hero.jsx
-┃ ┃ ┣ 📜 Skills.jsx
-┃ ┃ ┣ 📜 Portfolio.jsx
-┃ ┃ ┣ 📜 Contact.jsx
-┃ ┃ ┣ 📜 Footer.jsx
-┃ ┃ ┗ 📜 CustomCursor.jsx
-┃ ┣ 📜 App.jsx
-┃ ┣ 📜 main.jsx
-┃ ┗ 📜 index.css
-┣ 📜 .gitignore
-┣ 📜 README.md
-┣ 📜 package.json
-┣ 📜 vite.config.js
-┗ 📜 tailwind.config.js
+react-portfolio/
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public/
+│  ├─ profile.png
+│  └─ vite.svg
+├─ README.md
+├─ src/
+│  ├─ App.jsx
+│  ├─ assets
+│  ├─ components/
+│  │  ├─ CodingStats.jsx
+│  │  ├─ Contact.jsx
+│  │  ├─ Cursor.jsx
+│  │  ├─ Experience.jsx
+│  │  ├─ Footer.jsx
+│  │  ├─ Hero.jsx
+│  │  ├─ Loading.jsx
+│  │  ├─ Navbar.jsx
+│  │  ├─ Portfolio.jsx
+│  │  ├─ Reveal.jsx
+│  │  ├─ ShinyEffect.jsx
+│  │  └─ Skills.jsx
+│  ├─ index.css
+│  └─ main.jsx
+├─ tailwind.config.js
+└─ vite.config.js
+
 ```
 
 ---

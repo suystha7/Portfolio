@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense, lazy } from "react";
+import { useState, useEffect, Suspense, lazy, useMemo } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Loading from "./components/Loading";
 
@@ -12,7 +12,7 @@ const Navbar = lazy(() => import("./components/Navbar"));
 const Cursor = lazy(() => import("./components/Cursor"));
 const Experience = lazy(() => import("./components/Experience"));
 
-export default function App() {
+const App = () => {
   const [loading, setLoading] = useState(true);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -35,26 +35,29 @@ export default function App() {
     preloadResources();
   }, []);
 
-  if (loading) {
-    return <Loading />;
-  }
+  const memoizedLoadingScreen = useMemo(() => <Loading />, []);
+  const memoizedLayout = useMemo(() => {
+    return (
+      <div className="min-h-screen bg-[#0f0f0f]">
+        <motion.div
+          className="fixed top-0 left-0 right-0 h-1 bg-amber-600 origin-left z-50"
+          style={{ scaleX }}
+        />
+        <Suspense fallback={<Loading />}>
+          <Cursor />
+          <Navbar />
+          <Hero />
+          <Experience />
+          <Skills />
+          <Portfolio />
+          <Contact />
+          <Footer />
+        </Suspense>
+      </div>
+    );
+  }, [scaleX]);
 
-  return (
-    <div className="min-h-screen bg-[#0f0f0f]">
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-amber-600 origin-left z-50"
-        style={{ scaleX }}
-      />
-      <Suspense fallback={<Loading />}>
-        <Cursor />
-        <Navbar />
-        <Hero />
-        <Experience />
-        <Skills />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </Suspense>
-    </div>
-  );
-}
+  return loading ? memoizedLoadingScreen : memoizedLayout;
+};
+
+export default App;
