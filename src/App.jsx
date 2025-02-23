@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Cursor from "./components/Cursor";
+import { useState, useEffect, Suspense, lazy } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Loading from "./components/Loading";
-import Experience from "./components/Experience";
+
+// Lazy load components
+const Hero = lazy(() => import("./components/Hero"));
+const Skills = lazy(() => import("./components/Skills"));
+const Portfolio = lazy(() => import("./components/Portfolio"));
+const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Cursor = lazy(() => import("./components/Cursor"));
+const Experience = lazy(() => import("./components/Experience"));
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -43,15 +45,16 @@ export default function App() {
         className="fixed top-0 left-0 right-0 h-1 bg-amber-600 origin-left z-50"
         style={{ scaleX }}
       />
-      <Cursor />
-      <Navbar/>
-      <Hero />
-      <Experience />
-      <Skills />
-      <Portfolio />
-      {/* <CodingStats /> */}
-      <Contact />
-      <Footer />
+      <Suspense fallback={<Loading />}>
+        <Cursor />
+        <Navbar />
+        <Hero />
+        <Experience />
+        <Skills />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </Suspense>
     </div>
   );
 }
