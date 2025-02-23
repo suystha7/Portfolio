@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,14 +8,17 @@
 }
 
 /* Core fixes for horizontal scroll */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 /* Prevent horizontal scrolling */
-html, body {
+html,
+body {
   max-width: 100vw;
   overflow-x: clip;
   position: relative;
@@ -33,17 +36,16 @@ body {
 }
 
 h2 {
-  @apply text-xl md:text-4xl
+  @apply text-xl md:text-4xl;
 }
 
 p {
-  @apply text-xl tracking-tight leading-relaxed
+  @apply text-xl tracking-tight leading-relaxed;
 }
 
 span {
-  @apply text-purple-500
+  @apply text-purple-500;
 }
-
 
 .shiny-effect {
   position: absolute;
@@ -54,7 +56,7 @@ span {
 }
 
 .bg-primary-color {
-    @apply bg-red-500
+  @apply bg-red-500;
 }
 
 html {
@@ -64,7 +66,9 @@ html {
 
 @layer utilities {
   @media (min-width: 1024px) {
-    body, a, button {
+    body,
+    a,
+    button {
       cursor: none;
     }
   }
@@ -75,9 +79,15 @@ html {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .float {
@@ -120,7 +130,8 @@ html {
 }
 
 /* Add smooth transitions for all interactive elements */
-a, button {
+a,
+button {
   transition: all 0.3s ease;
 }
 

@@ -1,6 +1,8 @@
 import { useState, useEffect, Suspense, lazy, useMemo } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Loading from "./components/Loading";
+import { FaCaretUp } from "react-icons/fa";
+import EducationTimeline from "./components/EducationTimeline";
 
 // Lazy load components
 const Hero = lazy(() => import("./components/Hero"));
@@ -15,6 +17,7 @@ const Experience = lazy(() => import("./components/Experience"));
 const App = () => {
   const [loading, setLoading] = useState(true);
   const { scrollYProgress } = useScroll();
+
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -36,6 +39,7 @@ const App = () => {
   }, []);
 
   const memoizedLoadingScreen = useMemo(() => <Loading />, []);
+
   const memoizedLayout = useMemo(() => {
     return (
       <div className="min-h-screen bg-[#0f0f0f]">
@@ -47,12 +51,21 @@ const App = () => {
           <Cursor />
           <Navbar />
           <Hero />
-          <Experience />
           <Skills />
+          <Experience />
           <Portfolio />
+          <EducationTimeline />
           <Contact />
           <Footer />
         </Suspense>
+
+        {/* Scroll to Top Button */}
+        <motion.button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-8 right-8 bg-amber-600 text-white p-3 rounded-full shadow-lg animate-bounce"
+        >
+          <FaCaretUp className="w-5 h-5" />
+        </motion.button>
       </div>
     );
   }, [scaleX]);
