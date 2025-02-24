@@ -2,7 +2,6 @@ import { useState, useEffect, Suspense, lazy, useMemo } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Loading from "./components/Loading";
 import { FaCaretUp } from "react-icons/fa";
-import EducationTimeline from "./components/EducationTimeline";
 
 // Lazy load components
 const Hero = lazy(() => import("./components/Hero"));

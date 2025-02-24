@@ -47,7 +47,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Gradient line */}
-      <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" />
 
       <div className="max-w-[1300px] mx-auto flex justify-between items-center px-4 md:px-12 h-20">
         {/* Logo */}
@@ -86,18 +86,18 @@ const Navbar = () => {
             </motion.li>
           ))}
         </ul>
-        
-          <motion.a
-            href="https://me.suyogshr.in/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-amber-600/20 to-yellow-600/20 
+
+        <motion.a
+          href="https://me.suyogshr.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-6 py-2 text-sm font-medium text-white bg-gradient-to-r from-amber-600/20 to-yellow-600/20 
               border border-amber-500 rounded-xl hover:from-amber-600/30 hover:to-yellow-600/30"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Visit Profiles
-          </motion.a>
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Visit Profiles
+        </motion.a>
 
         {/* Mobile Menu Button */}
         <motion.div

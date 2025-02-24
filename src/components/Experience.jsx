@@ -51,9 +51,9 @@ const Experience = () => {
 
         <motion.div
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-center place-content-center"
-          initial="hidden"
-          animate="visible"
-          transition={{ staggerChildren: 0.3 }} // For staggered animation effect on the child items
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
         >
           {experiences.map((experience, index) => (
             <Reveal key={index}>
@@ -68,7 +68,9 @@ const Experience = () => {
                   {experience.company}
                 </h2>
                 <p className="text-gray-300 text-base">{experience.period}</p>
-                <p className="text-gray-200 mt-4 text-lg font-semibold">{experience.position}</p>
+                <p className="text-gray-200 mt-4 text-lg font-semibold">
+                  {experience.position}
+                </p>
               </motion.div>
             </Reveal>
           ))}

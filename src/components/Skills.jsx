@@ -98,6 +98,8 @@ const skills = [
   },
 ];
 
+
+
 const TechCard = ({ item, index }) => {
   const [isActive, setIsActive] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);

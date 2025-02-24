@@ -3,8 +3,6 @@ import {
   AiFillLinkedin,
   AiFillGithub,
   AiOutlineMail,
-  AiOutlineTwitter,
-  AiFillInstagram,
   AiOutlineInstagram,
 } from "react-icons/ai";
 import { motion } from "framer-motion";
@@ -166,22 +164,6 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             className="space-y-8"
           >
-            <div
-              className="bg-gradient-to-br from-amber-900/40 to-yellow-800/30 backdrop-blur-md
-                          border border-amber-500/30 p-8 rounded-2xl
-                          transform hover:-translate-y-1 transition-all duration-300
-                          hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]"
-            >
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">
-                About Me
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                Feel free to reach out for opportunities, collaborations, or
-                just a tech chat! Always excited to explore new ideas and build
-                amazing things together.
-              </p>
-            </div>
-
             <motion.div
               className="grid grid-cols-2 gap-4 "
               variants={{
@@ -199,6 +181,22 @@ const Contact = () => {
               <StatsCard number="20+" label="Projects" />
               <StatsCard number="2+" label="Years Experience" />
             </motion.div>
+
+            <div
+              className="bg-gradient-to-br from-amber-900/40 to-yellow-800/30 backdrop-blur-md
+                          border border-amber-500/30 p-8 rounded-2xl
+                          transform hover:-translate-y-1 transition-all duration-300
+                          hover:shadow-[0_0_30px_rgba(244,236,107,0.3)]"
+            >
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent">
+                About Me
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                Feel free to reach out for opportunities, collaborations, or
+                just a tech chat! Always excited to explore new ideas and build
+                amazing things together.
+              </p>
+            </div>
 
             <div className="flex flex-wrap gap-4 justify-center">
               {[
