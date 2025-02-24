@@ -10,7 +10,6 @@ import {
 } from "react-icons/di";
 import {
   SiTailwindcss,
-  SiCplusplus,
   SiExpress,
   SiNextdotjs,
   SiTypescript,
